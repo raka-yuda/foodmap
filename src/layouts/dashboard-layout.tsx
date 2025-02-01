@@ -67,18 +67,16 @@ function DashboardLayout({ titlePage = "Dashboard", children, variant = "default
       }
 
       {variant === "rounded" &&
-        <div className={`${dmSans.className} flex min-h-screen`}>
+        <div className={`${dmSans.className} flex h-[100dvh]`}>
           <SidebarProvider>
             <AppSidebar variant={variant} />
-            <main className="flex-1 p-6 h-screen overflow-hidden">
-
-
+            <main className="flex-1 p-6 h-[100dvh] overflow-hidden">
               <div className="relative h-full bg-white rounded-3xl flex flex-col">
                 <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_15px_rgba(0,0,0,0.2)] rounded-3xl z-[1]" />
-                <div className="flex items-center p-4 bg-[#c23531] rounded-t-3xl flex-none">
+                <div className="flex items-center p-4 bg-[#c23531] rounded-t-3xl flex-none shadow-2xl">
                   <SidebarTrigger className="bg-white" />
                 </div>
-                <div className="relative overflow-y-auto">
+                <div className="relative overflow-y-auto rounded-3xl">
                   {children}
                 </div>
               </div>
