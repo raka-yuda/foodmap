@@ -62,7 +62,7 @@ const Chart = () => {
 
       {themeVariant === "rounded" &&    
         <DashboardLayout titlePage={"Chart | Foodmap"} variant={"rounded"}>
-          <div className={`w-full p-8`}>
+          <div className={`w-full md:p-8 p-4`}>
             <div className="grid grid-cols-4 md:gap-6 gap-4">
               <figure className="col-span-4 md:col-span-2 shadow-2xl bg-white rounded-2xl my-2 bg-cover h-auto w-auto p-4">
                 <p className={`text-lg font-bold p-4`}>

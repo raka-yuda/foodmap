@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import {
   BarChart,
-  // MainMap,
   MainTable,
   PieChart,
   SmallCard,
@@ -202,10 +201,8 @@ const Dashboard = () => {
 
       {themeVariant === "rounded" &&    
         <DashboardLayout titlePage={"Home | Foodmap"} variant={"rounded"}>
-          
           <div className={`w-full md:p-8 p-4`}>
             <div className="grid grid-cols-4 md:gap-6 gap-4">
-              
               <figure className="col-span-4 md:col-span-3 min-w-[64px] h-[420px] shadow-2xl bg-white rounded-2xl  bg-cover p-4">
                 <p className={`text-lg font-bold p-4`}>Map Pinpoints</p>
                 <LeafletMap className={""} restaurants={restaurantMarkers}/>
