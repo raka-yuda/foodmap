@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import {
   BarChart,
-  // MainMap,
   MainTable,
   PieChart,
   SmallCard,
