@@ -125,7 +125,7 @@ const AppSidebar = ({ children, variant }: any) => {
                             <div className="ml-8 h-auto border-l-2 border-[#c23531]"></div>
                             <Link
                               href={item.path}
-                              className={`h-full w-full my-1 ml-4 py-2 px-6 block text-sm  hover:text-white cursor-pointer rounded-2xl 
+                              className={`h-full w-full my-1 md:ml-4 md:mr-0 mx-4 py-2 px-6 block text-sm  hover:text-white cursor-pointer rounded-2xl 
                                 ${item.path === pathname
                                   ? "bg-[#c23531] text-white"
                                   : "bg-white hover:bg-gray-300"

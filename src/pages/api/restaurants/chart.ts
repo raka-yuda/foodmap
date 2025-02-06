@@ -19,7 +19,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseType>
 ) {
-  const { group_by } = req.query;
+  const { group_by = "rating" } = req.query;
   const restaurantData = fetchRestaurantData();
   let data: ChartData[] = [];
 

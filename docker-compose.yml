@@ -1,6 +1,7 @@
 version: '3'
 services:
-  nextjs:
+  app:
+    image: ghcr.io/raka-yuda/foodmap:latest
     build:
       context: .
       dockerfile: Dockerfile
