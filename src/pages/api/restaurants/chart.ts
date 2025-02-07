@@ -33,21 +33,42 @@ export default function handler(
       data = data.concat(group);
     }
 
+    // console.log("data: ", data)
+
     restaurantData.forEach((restaurant, index) => {
       const rating = parseFloat(restaurant.rating.overall);
-      data.forEach((group, indexGroup) => {
-        if (rating >= 0 && rating <= 1 && group.rating === 1) {
-          data[indexGroup] = { ...data[indexGroup], value: group.value + 1 };
-        } else if (rating > 1 && rating <= 2 && group.rating === 2) {
-          data[indexGroup] = { ...data[indexGroup], value: group.value + 1 };
-        } else if (rating > 2 && rating <= 3 && group.rating === 3) {
-          data[indexGroup] = { ...data[indexGroup], value: group.value + 1 };
-        } else if (rating > 3 && rating <= 4 && group.rating === 4) {
-          data[indexGroup] = { ...data[indexGroup], value: group.value + 1 };
-        } else if (rating > 4 && rating <= 5 && group.rating === 5) {
-          data[indexGroup] = { ...data[indexGroup], value: group.value + 1 };
-        }
-      });
+
+      // if (index < 10) {
+        // console.log("index: ", index)
+        // console.log("rating: ", rating)
+        // console.log("rating ceil: ", Math.ceil(rating))
+        // console.log("rating ceil obj: ", data[(Math.ceil(rating)) - 1])
+        // console.log("rating ceil value: ", data[(Math.ceil(rating)) - 1].value)
+      // }
+
+      if (rating === 0) {
+        data[0] = { ...data[0], value: data[0].value + 1 };
+      }
+
+      if (rating > 0) {
+        data[(Math.ceil(rating)) - 1] = { ...data[(Math.ceil(rating)) - 1], value: data[(Math.ceil(rating)) - 1].value + 1 };
+      }
+
+      // data.forEach((group, indexGroup) => {
+      //   // console.log(group)
+      //   // data[indexGroup] = { ...data[indexGroup], value: group.value + 1 };
+      //   if (rating >= 0 && rating <= 1 && group.rating === 1) {
+      //     data[indexGroup] = { ...data[indexGroup], value: group.value + 1 };
+      //   } else if (rating > 1 && rating <= 2 && group.rating === 2) {
+      //     data[indexGroup] = { ...data[indexGroup], value: group.value + 1 };
+      //   } else if (rating > 2 && rating <= 3 && group.rating === 3) {
+      //     data[indexGroup] = { ...data[indexGroup], value: group.value + 1 };
+      //   } else if (rating > 3 && rating <= 4 && group.rating === 4) {
+      //     data[indexGroup] = { ...data[indexGroup], value: group.value + 1 };
+      //   } else if (rating > 4 && rating <= 5 && group.rating === 5) {
+      //     data[indexGroup] = { ...data[indexGroup], value: group.value + 1 };
+      //   }
+      // });
     });
   }
 
